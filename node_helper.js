@@ -19,13 +19,17 @@ module.exports = NodeHelper.create({
       });
       const data = await response.json();
 
-      // Check the new data structure from your Postman test
       if (data.content && data.content.people) {
-        const online = data.content.people.filter(p => p.presenceState === "Online");
-        this.sendSocketNotification("XBOX_DATA_RESULT", online);
+        const allFriends = data.content.people;
+        const onlineFriends = allFriends.filter(p => p.presenceState === "Online");
+        
+        // Send a payload containing the online array and the total length
+        this.sendSocketNotification("XBOX_DATA_RESULT", {
+          online: onlineFriends,
+          totalCount: allFriends.length
+        });
       } else {
-        console.error("[MMM-XboxFriends] Data structure mismatch. Received:", data);
-        this.sendSocketNotification("XBOX_DATA_RESULT", []);
+        this.sendSocketNotification("XBOX_DATA_RESULT", { online: [], totalCount: 0 });
       }
     } catch (e) {
       console.error("[MMM-XboxFriends] API Error:", e);
