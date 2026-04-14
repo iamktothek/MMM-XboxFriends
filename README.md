@@ -1,8 +1,4 @@
 # MMM-XboxFriends
-A Magic Mirror module to display online xbox friends and their status
-
-Markdown
-# MMM-XboxFriends
 
 A MagicMirror² module that displays your online Xbox friends in a sleek, dashboard-style card layout. Featuring real-time activity updates, avatar support, and "In-Party" detection.
 
