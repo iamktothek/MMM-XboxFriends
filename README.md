@@ -11,14 +11,15 @@ A MagicMirror² module that displays your online Xbox friends in a sleek, dashbo
 
 ## Installation
 
-1. Navigate to your MagicMirror's modules folder:
+Navigate to your MagicMirror's modules folder:
    ```bash
    cd ~/MagicMirror/modules
-   
+   ```
+
 Clone this repository:
 
    ```bash
-   git clone [https://github.com/iamktothek/MMM-XboxFriends.git](https://github.com/iamktothek/MMM-XboxFriends.git)
+   git clone https://github.com/iamktothek/MMM-XboxFriends.git
    ```
 Enter the module folder and install dependencies:
 
