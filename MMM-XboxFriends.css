@@ -1,18 +1,26 @@
-.xbox-container { width: 300px; }
+.xbox-container { 
+  width: 100%; 
+  min-width: 320px;
+}
 
 .xbox-header {
   display: flex;
   align-items: center;
+  justify-content: flex-end; /* Align header content to the right */
   padding-bottom: 8px;
   font-weight: bold;
-  color: #107c10;
+  color: #EEEEEE;            /* White text to match mirror */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.header-icon { margin-right: 10px; }
+.header-icon { 
+  margin-left: 10px;
+  color: #107c10;            /* Keep the Xbox icon green for flair */
+  font-size: 16px;
+}
 
 .friend-row {
   position: relative;
@@ -22,7 +30,9 @@
   background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
   border-left: 5px solid #107c10;
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  width: 100%;               /* Fill available module width */
+  box-sizing: border-box;
 }
 
 .avatar {
@@ -30,15 +40,27 @@
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
+  flex-shrink: 0;
 }
 
-.info { text-align: left; }
+.info { 
+  text-align: left; 
+  flex-grow: 1; 
+  overflow: hidden;
+}
 
-.gamertag { font-size: 20px; font-weight: 600; color: #fff; }
+.gamertag { 
+  font-size: 18px; 
+  font-weight: 600; 
+  color: #fff; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .status { font-weight: 800; font-size: 10px; color: #00cc00; }
 
-.activity { color: #ddd; font-size: 14px; margin-top: 4px; }
+.activity { color: #ddd; font-size: 13px; margin-top: 4px; }
 
 .xbox-logo {
   position: absolute;
