@@ -43,23 +43,21 @@ Configuration
 Add the following to the modules array in your config/config.js file:
 
    ```bash
-   JavaScript
    {
      module: "MMM-XboxFriends",
      position: "top_right", // Recommended position
      config: {
        apiKey: "YOUR_XBL_IO_API_KEY", // Paste your key here
-       updateInterval: 120000        // Refresh rate in milliseconds (Default: 2 mins)
+       updateInterval: 120000        // Refresh rate in milliseconds (Default: 2 mins - NOTE: xbl.io free tier restricts to 150 calls per hour)
      }
    },
    ```
 
-Dependencies
-node-fetch: Used for backend API requests.
+## Dependencies
+* **node-fetch:** Used for backend API requests.
+* **FontAwesome:** Used for the Xbox and Headset icons (standard with MagicMirror).
 
-FontAwesome: Used for the Xbox and Headset icons (standard with MagicMirror).
-
-License
+## License
 MIT
 
 

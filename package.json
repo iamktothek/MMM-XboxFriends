@@ -1,0 +1,8 @@
+{
+  "name": "MMM-XboxFriends",
+  "version": "1.0.0",
+  "description": "Xbox Live Friends Module for MagicMirror",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
