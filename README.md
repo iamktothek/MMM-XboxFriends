@@ -3,7 +3,7 @@
 A MagicMirror² module that displays your online Xbox friends in a sleek, dashboard-style card layout. Featuring real-time activity updates, avatar support, and "In-Party" detection.
 
 ## Features
-* **Live Status:** Updates every 2 minutes.
+* **Live Status:** Updates every 2 minutes (interval can be changed).
 * **Official UI:** Styled to match the Xbox Fluent design language.
 * **Activity Tracking:** Shows exactly what game or app your friends are using.
 * **Party Detection:** A pulsing headset icon appears when a friend is in a voice party.
