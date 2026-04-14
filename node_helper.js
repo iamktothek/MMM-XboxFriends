@@ -19,16 +19,26 @@ module.exports = NodeHelper.create({
       });
       const data = await response.json();
 
-      if (data.content && data.content.people) {
-        const allFriends = data.content.people;
-        const onlineFriends = allFriends.filter(p => p.presenceState === "Online");
+      // Ensure we can find the friends list regardless of wrapper
+      let people = null;
+      if (data && data.content && data.content.people) {
+        people = data.content.people;
+      } else if (data && data.people) {
+        people = data.people;
+      }
+
+      if (people) {
+        // Filter: We show them if presenceState is exactly "Online" (ignoring CAPS)
+        const onlineFriends = people.filter(p => {
+            return p.presenceState && p.presenceState.toLowerCase() === "online";
+        });
         
-        // Send a payload containing the online array and the total length
         this.sendSocketNotification("XBOX_DATA_RESULT", {
           online: onlineFriends,
-          totalCount: allFriends.length
+          totalCount: people.length
         });
       } else {
+        console.error("[MMM-XboxFriends] No people array found in API response.");
         this.sendSocketNotification("XBOX_DATA_RESULT", { online: [], totalCount: 0 });
       }
     } catch (e) {
