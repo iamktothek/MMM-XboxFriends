@@ -39,7 +39,7 @@ This module requires a free API key from OpenXBL to access Xbox Live data safely
 
 4. You will see an API Key (a long string of letters and numbers). Copy this key.
 
-Configuration
+## Configuration
 Add the following to the modules array in your config/config.js file:
 
    ```bash
