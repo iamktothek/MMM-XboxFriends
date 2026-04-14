@@ -2,6 +2,10 @@
 
 A MagicMirror² module that displays your online Xbox friends in a sleek, dashboard-style card layout. Featuring real-time activity updates, avatar support, and "In-Party" detection.
 
+## Preview
+
+![image alt](https://github.com/iamktothek/MMM-XboxFriends/blob/main/img/MMM-XboxFriends-preview.png)
+
 ## Features
 * **Live Status:** Updates every 2 minutes (interval can be changed).
 * **Official UI:** Styled to match the Xbox Fluent design language.
