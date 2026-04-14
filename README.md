@@ -18,38 +18,45 @@ A MagicMirror² module that displays your online Xbox friends in a sleek, dashbo
 1. Navigate to your MagicMirror's modules folder:
    ```bash
    cd ~/MagicMirror/modules
+   
 Clone this repository:
 
-Bash
-git clone [https://github.com/iamktothek/MMM-XboxFriends.git](https://github.com/iamktothek/MMM-XboxFriends.git)
+   ```bash
+   git clone [https://github.com/iamktothek/MMM-XboxFriends.git](https://github.com/iamktothek/MMM-XboxFriends.git)
+   ```
 Enter the module folder and install dependencies:
 
-Bash
-cd MMM-XboxFriends
-npm install
+   ```bash
+   cd MMM-XboxFriends
+   npm install
+   ```
+
 Getting your Xbox API Key (xbl.io)
 This module requires a free API key from OpenXBL to access Xbox Live data safely.
 
-Go to xbl.io.
+1. Go to xbl.io.
 
-Login with your Microsoft/Xbox account.
+2. Login with your Microsoft/Xbox account.
 
-Once logged in, go to your Dashboard.
+3. Once logged in, go to your Dashboard.
 
-You will see an API Key (a long string of letters and numbers). Copy this key.
+4. You will see an API Key (a long string of letters and numbers). Copy this key.
 
 Configuration
 Add the following to the modules array in your config/config.js file:
 
-JavaScript
-{
-  module: "MMM-XboxFriends",
-  position: "top_right", // Recommended position
-  config: {
-    apiKey: "YOUR_XBL_IO_API_KEY", // Paste your key here
-    updateInterval: 120000        // Refresh rate in milliseconds (Default: 2 mins)
-  }
-},
+   ```bash
+   JavaScript
+   {
+     module: "MMM-XboxFriends",
+     position: "top_right", // Recommended position
+     config: {
+       apiKey: "YOUR_XBL_IO_API_KEY", // Paste your key here
+       updateInterval: 120000        // Refresh rate in milliseconds (Default: 2 mins)
+     }
+   },
+   ```
+
 Dependencies
 node-fetch: Used for backend API requests.
 
@@ -60,11 +67,3 @@ MIT
 
 
 ---
-
-### Pro-Tip for GitHub:
-Before you commit and push your code to GitHub, make sure you **do not** include your actual API key in the files. 
-
-1. Create a file named `.gitignore` in your module folder.
-2. Add the following line to it:
-   ```text
-   node_modules/
